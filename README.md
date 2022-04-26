@@ -93,9 +93,12 @@ peticiones fueron ejecutadas y tuvieron una respuesta positiva, no se generó ni
 
     * *Dedicated*: El cliente puede implementar manualmente la escalabilidad, puede tener timeouts ilimitados, por instancia la memora es de 1.7GB y una capacidad de almacenamiento hasta de 1000 GB, ofrece un máximo de 20 instancias. 
 
+* ¿Por qué la memorization falla o no funciona de forma correcta?
+
+    Al usar el plan Consumption, la memoria solo será guardada por 5 minutos, entonces, al pasar este tiempo, los cálculos que se han realziado anteriormente, deberán realizarse de nuevo haciendo que el método de memorización no funcione de manera correcta. 
 
 
-
-* ¿Por qué la memoization falla o no funciona de forma correcta?
 * ¿Cómo funciona el sistema de facturación de las Function App?
-* Informe
+
+    El plan de consumo de Azure Function se factura en función del consumo de recursos y las ejecuciones por segundo. 
+
